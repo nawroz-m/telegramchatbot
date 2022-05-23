@@ -78,5 +78,5 @@ bot.on("text", (msg) => {
 bot.launch();
 
 app.listen(PORT, () => {
-  console.log("Server has been started");
+  console.log("Server has been started " + PORT);
 });
