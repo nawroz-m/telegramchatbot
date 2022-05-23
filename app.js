@@ -3,6 +3,7 @@ require("dotenv").config();
 const fs = require("fs");
 const axios = require("axios");
 const Telegraf = require("telegraf").Telegraf;
+const path = require("path");
 
 const bot = new Telegraf(process.env.TOKEN, { polling: true });
 
@@ -10,7 +11,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 let codeData;
-fs.readFile(process.env.CODEPATH, "utf8", (err, data) => {
+fs.readFile(path.dirname(__filename + "/app.js"), "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
