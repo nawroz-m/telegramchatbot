@@ -5,10 +5,7 @@ const axios = require("axios");
 const Telegraf = require("telegraf").Telegraf;
 const path = require("path");
 
-const bot = new Telegraf(
-  process.env.TOKEN || "5377090337:AAFWkADLkGTljDQWZT7JFRMn-KB91-HAjsc",
-  { polling: true }
-);
+const bot = new Telegraf(process.env.TOKEN, { polling: true });
 
 const app = express();
 
