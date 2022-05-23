@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "nodemon app.js",
+    "postinstall": "npm run build",
     "start": "node app.js"
   },
   "author": "",
